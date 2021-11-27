@@ -536,24 +536,17 @@ var uniforms = {
   }
 };
 
-/*
-let speed = 40;
-setTimeout(function () {
-  options.perlin.time = 3.5;
-}, 1000);
-*/
-
-let options = {
+var options = {
   perlin: {
     time: 3.5, // 3.5
     morph: 8.5,
-    dnoise: 2.0
+    dnoise: 0.0
   },
   chroma: {
-    RGBr: 6.0,
-    RGBg: 0.9,
-    RGBb: 8.0,
-    RGBn: 9.0,
+    RGBr: 3.3,
+    RGBg: 0.0,
+    RGBb: 3.7,
+    RGBn: 0.89,
     RGBm: 0.0
   },
   camera: {
