@@ -1,0 +1,991 @@
+backend:
+  name: git-gateway
+  branch: main
+  accept_roles:
+    - admin
+    - editor
+media_folder: theme/assets/images
+public_folder: /assets/images
+collections:
+  - name: pages
+    label: Pages
+    identifier_field: title
+    extension: md
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    folder: cms/pages
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '{{slug}}.html'
+      - &ref_0
+        label: Seo
+        name: seo
+        widget: object
+        collapsed: true
+        fields:
+          - label: Title
+            name: title
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: string
+            required: false
+          - label: No index
+            name: noindex
+            widget: boolean
+            default: false
+            required: false
+          - label: Open Graph Title
+            name: og:title
+            widget: string
+            required: false
+          - label: Open Graph Image
+            name: og:image
+            widget: image
+            required: false
+            media_library:
+              config:
+                multiple: false
+          - label: Twitter Title
+            name: twitter:title
+            widget: string
+            default: summary
+            required: false
+          - label: Twitter Card
+            name: twitter:card
+            widget: string
+            default: summary
+            required: false
+          - label: Twitter Site
+            name: twitter:site
+            widget: string
+            required: false
+          - label: Twitter Creator
+            name: twitter:creator
+            widget: string
+            required: false
+          - label: Additional HTML tags
+            name: additional_tags
+            widget: text
+            required: false
+  - name: faqs
+    label: FAQs
+    folder: cms/faqs
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - label: Answer (rich text allowed)
+        name: body
+        widget: markdown
+        required: false
+      - hint: Is this answer password protected ?
+        name: f_protected
+        label: Protected
+        widget: boolean
+        required: false
+      - hint: Order at which each question should appear
+        name: f_order
+        label: Order
+        widget: number
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: faqs
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[faqs].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - name: pdfs_categories
+    label: PDFs categories
+    folder: cms/pdfs-categories
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: The name of the category, it has to be as short as possible
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: UI color of the category (optional, set by the designer)
+        name: f_color-optional-set-by-the-designer
+        label: Color (optional, set by the designer)
+        widget: color
+        required: false
+        enableAlpha: true
+        allowInput: true
+      - hint: Order at which the filter should appear (optional)
+        name: f_order
+        label: Order
+        widget: number
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: pdfs-categories
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[pdfs-categories].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - name: pdfs
+    label: PDFs
+    folder: cms/pdfs
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: A User friendly short name of your PDF
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: Drag and drop the PDF file or document you'd like to host
+        name: f_pdf-file
+        label: PDF file
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: File
+            widget: file
+            required: false
+            allow_multiple: false
+      - hint: Select one category that matches the content of the PDF
+        name: f_category
+        label: Category
+        widget: relation
+        required: true
+        collection: pdfs_categories
+        value_field: cms/pdfs-categories/{{slug}}.md
+        search_fields:
+          - slug
+          - name
+        display_fields:
+          - title
+        multiple: false
+      - hint: Is the PDF in "highlight" ? If so, switch the toggle on.
+        name: f_highlight
+        label: Highlight
+        widget: boolean
+        required: false
+      - hint: The date at which the PDF was published (use the date picker)
+        name: f_date
+        label: Date
+        widget: datetime
+        required: true
+      - hint: Who did the research / published the PDF ?
+        name: f_author-optional
+        label: Author (optional)
+        widget: string
+        required: false
+      - hint: Shared link from your Dropbox where the video is saved
+        name: f_video-dropbox-link-optional
+        label: Video dropbox link
+        widget: string
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: pdfs
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[pdfs].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - name: legal
+    label: Single Pages
+    folder: cms/legal
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - label: Imprint text
+        name: body
+        widget: markdown
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: legal
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[legal].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - name: researches
+    label: Researches
+    folder: cms/researches
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_short-description
+        label: Short description
+        widget: text
+        required: false
+      - hint: Please try use vector-based images (SVG), else JPG or PNG.
+        name: f_logo
+        label: Logo
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: ''
+        name: f_order
+        label: Order
+        widget: number
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: researches
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[researches].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - name: expertise
+    label: Expertises
+    folder: cms/expertise
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: A user friendly short name of your expertise
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_short-description
+        label: Short description
+        widget: text
+        required: true
+      - hint: ''
+        name: f_order
+        label: Order
+        widget: number
+        required: true
+      - hint: Color or the expertise background icon
+        name: f_color
+        label: Color
+        widget: color
+        required: true
+        enableAlpha: true
+        allowInput: true
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: expertise
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[expertise].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - label: Theme Settings
+    name: settings
+    identifier_field: title
+    extension: json
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    files:
+      - label: General
+        name: site
+        file: cms/_data/settings/site.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: General
+          - hint: Full domain url (needed for a correct sitemap file)
+            name: domain
+            label: Domain
+            widget: string
+            required: false
+          - name: favicon
+            label: Favicon
+            widget: image
+            allow_multiple: false
+            required: false
+          - name: apple_touch_icon
+            label: Apple Touch Icon
+            widget: image
+            allow_multiple: false
+            required: false
+          - name: header_additional_content
+            label: Additional Content Header
+            hint: Content here will be placed before </head> tag
+            widget: text
+            required: false
+          - name: footer_additional_content
+            label: Additional Content Footer
+            hint: Content here will be placed before </body> tag
+            widget: text
+            required: false
+          - name: images_optimization
+            label: Images Optimization
+            widget: object
+            collapsed: false
+            fields:
+              - label: Image Formats
+                name: formats
+                widget: select
+                multiple: true
+                options:
+                  - label: Avif
+                    value: avif
+                  - label: Webp
+                    value: webp
+              - label: Image Dimensions
+                name: dimensions
+                widget: select
+                multiple: true
+                options:
+                  - label: '500'
+                    value: 500
+                  - label: '800'
+                    value: 800
+                  - label: '1080'
+                    value: 1080
+                  - label: '1600'
+                    value: 1600
+                  - label: '2000'
+                    value: 2000
+                  - label: '2600'
+                    value: 2600
+      - label: Colors
+        name: colors
+        file: cms/_data/colors.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Colors
+      - label: Texts
+        name: texts
+        file: cms/_data/texts.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Texts
+          - hint: 'Original text: payment error - card declined, key: -4d6f3027'
+            label: Text
+            name: '-4d6f3027'
+            widget: string
+          - hint: 'Original text: No tracking,, key: -63fe3f2a'
+            label: Text
+            name: '-63fe3f2a'
+            widget: string
+          - hint: 'Original text: no cookies, no tracing, key: 47024107'
+            label: Text
+            name: '47024107'
+            widget: string
+          - hint: 'Original text: We never collect user data. , key: 61895c95'
+            label: Text
+            name: 61895c95
+            widget: string
+          - hint: 'Original text: About, key: 3c2336d'
+            label: Text
+            name: 3c2336d
+            widget: string
+          - hint: 'Original text: Expertise, key: 7f8f21f1'
+            label: Text
+            name: 7f8f21f1
+            widget: string
+          - hint: 'Original text: Research, key: -110fda45'
+            label: Text
+            name: '-110fda45'
+            widget: string
+          - hint: 'Original text: Why us, key: -65994dea'
+            label: Text
+            name: '-65994dea'
+            widget: string
+          - hint: 'Original text: Contact, key: -64104400'
+            label: Text
+            name: '-64104400'
+            widget: string
+          - hint: 'Original text: Who we are, key: -47239b3c'
+            label: Text
+            name: '-47239b3c'
+            widget: string
+          - hint: >-
+              Original text: We are a global community of industry professionals
+              focusing our collective experience to analyse frontier financial
+              markets. Our network includes investment companies, family offices
+              and early adopters of blockchain technology, all of whom today
+              possess invaluable experience and information access in the
+              cryptocurrency industry., key: -6902e17e
+            label: Text
+            name: '-6902e17e'
+            widget: text
+          - hint: 'Original text: Our Expertise, key: 753475fd'
+            label: Text
+            name: 753475fd
+            widget: string
+          - hint: 'Original text: No items found., key: 3d503d2b'
+            label: Text
+            name: 3d503d2b
+            widget: string
+          - hint: >-
+              Original text: The world of Fin-Tech is evolving faster than ever.
+              , key: 52f4d1c4
+            label: Text
+            name: 52f4d1c4
+            widget: string
+          - hint: >-
+              Original text: Access our Research and FAQ sections , key:
+              -480cf736
+            label: Text
+            name: '-480cf736'
+            widget: string
+          - hint: 'Original text: to get up to speed, key: 3f8e88d8'
+            label: Text
+            name: 3f8e88d8
+            widget: string
+          - hint: 'Original text: 🔐 FAQ, key: 2a1935c9'
+            label: Text
+            name: 2a1935c9
+            widget: string
+          - hint: 'Original text: Why us ?, key: -647d774b'
+            label: Text
+            name: '-647d774b'
+            widget: string
+          - hint: >-
+              Original text: Seeking to bridge the requirements of regulated
+              financial institutions with investment opportunities created by
+              cutting edge fin-tech projects, we approach our research in a
+              pragmatic and transparent manner, allowing our members to receive
+              the most competent roadmap for evolving their business in the
+              digital economy., key: -60e1538e
+            label: Text
+            name: '-60e1538e'
+            widget: text
+          - hint: 'Original text: close, key: 5a5ddf8'
+            label: Text
+            name: 5a5ddf8
+            widget: string
+          - hint: >-
+              Original text: Thank you! Your submission has been received!, key:
+              5a0ea5a1
+            label: Text
+            name: 5a0ea5a1
+            widget: string
+          - hint: >-
+              Original text: Oops! Something went wrong while submitting the
+              form., key: -7c112e99
+            label: Text
+            name: '-7c112e99'
+            widget: string
+          - hint: >-
+              Original text: Innovational solutions in the digital economy, key:
+              f7fdd82
+            label: Text
+            name: f7fdd82
+            widget: string
+          - hint: 'Original text: Your interest, key: -3ea46fa9'
+            label: Text
+            name: '-3ea46fa9'
+            widget: string
+          - hint: 'Original text: On-Chain Synthetic derivatives, key: -419477bc'
+            label: Text
+            name: '-419477bc'
+            widget: string
+          - hint: 'Original text: Stablecoin Staking, key: -178b0e1d'
+            label: Text
+            name: '-178b0e1d'
+            widget: string
+          - hint: 'Original text: Cross-Chain Liquidity, key: -18246c9a'
+            label: Text
+            name: '-18246c9a'
+            widget: string
+          - hint: 'Original text: © Financial Engineers, 2021, key: bc566c7'
+            label: Text
+            name: bc566c7
+            widget: string
+          - hint: 'Original text: Imprint, key: -29f92c17'
+            label: Text
+            name: '-29f92c17'
+            widget: string
+          - hint: 'Original text: Privacy Policy, key: -3fbde6f6'
+            label: Text
+            name: '-3fbde6f6'
+            widget: string
+          - hint: 'Original text: Page Not Found, key: -40b0787c'
+            label: Text
+            name: '-40b0787c'
+            widget: string
+          - hint: >-
+              Original text: The page you are looking for doesn't exist or has
+              been moved, key: 556d64d8
+            label: Text
+            name: 556d64d8
+            widget: string
+          - hint: 'Original text: 🔐 Request access, key: 73a2f82'
+            label: Text
+            name: 73a2f82
+            widget: string
+          - hint: 'Original text: Oops, wrong password., key: -9585757'
+            label: Text
+            name: '-9585757'
+            widget: string
+          - hint: 'Original text: Please try again., key: 4b1754a9'
+            label: Text
+            name: 4b1754a9
+            widget: string
+          - hint: 'Original text: Frequently Asked Questions, key: -475b7d60'
+            label: Text
+            name: '-475b7d60'
+            widget: string
+          - hint: >-
+              Original text: Use this catalog for the opportunity to browse
+              through a highly curated list of PDFs from our vast pipeline of
+              reports:, key: -34f2bba9
+            label: Text
+            name: '-34f2bba9'
+            widget: text
+          - hint: 'Original text: ⚡️ Highlight, key: -4ff31d7e'
+            label: Text
+            name: '-4ff31d7e'
+            widget: string
+          - hint: 'Original text: All, key: 10181'
+            label: Text
+            name: '10181'
+            widget: string
+          - hint: 'Original text: feat, key: 2fe532'
+            label: Text
+            name: 2fe532
+            widget: string
+          - hint: 'Original text: ⚡️, key: 5ab8e'
+            label: Text
+            name: 5ab8e
+            widget: string
+          - hint: 'Original text: PDF, key: 134d2'
+            label: Text
+            name: 134d2
+            widget: string
+          - hint: 'Original text: Download, key: 58f52ca8'
+            label: Text
+            name: 58f52ca8
+            widget: string
+          - hint: 'Original text: MP4, key: 12af1'
+            label: Text
+            name: 12af1
+            widget: string
+          - hint: >-
+              Original text: The product of our research is often used to
+              improve the efficiency of business processes and available
+              resources, which is accomplished by maximising their utility
+              through superior methods of value transfer using blockchain
+              technology., key: -1a123e44
+            label: Text
+            name: '-1a123e44'
+            widget: text
+          - hint: 'Original text: Currently Researching, key: 36dfa7cd'
+            label: Text
+            name: 36dfa7cd
+            widget: string
+          - hint: 'Original text: category 1, key: 4d47798f'
+            label: Text
+            name: 4d47798f
+            widget: string
+          - hint: 'Original text: category2, key: 5d54e2f4'
+            label: Text
+            name: 5d54e2f4
+            widget: string
+          - hint: 'Original text: category3, key: 5d54e2f5'
+            label: Text
+            name: 5d54e2f5
+            widget: string
+          - hint: 'Original text: category4, key: 5d54e2f6'
+            label: Text
+            name: 5d54e2f6
+            widget: string
+          - hint: 'Original text: category5, key: 5d54e2f7'
+            label: Text
+            name: 5d54e2f7
+            widget: string
+          - hint: 'Original text: You have questions?, key: -6583b7d7'
+            label: Text
+            name: '-6583b7d7'
+            widget: string
+          - hint: 'Original text: We have answers., key: -6b6defa1'
+            label: Text
+            name: '-6b6defa1'
+            widget: string
+          - hint: 'Original text: FAQ, key: 10ef6'
+            label: Text
+            name: 10ef6
+            widget: string
+      - label: Links
+        name: links
+        file: cms/_data/links.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Links
+          - hint: >-
+              Original link: https://www.financialengineers.com/#about, key:
+              -7df93f1b
+            label: Link
+            name: '-7df93f1b'
+            widget: string
+          - hint: >-
+              Original link: https://www.financialengineers.com/#expertise, key:
+              5603369
+            label: Link
+            name: '5603369'
+            widget: string
+          - hint: 'Original link: /research, key: 23a622ca'
+            label: Link
+            name: 23a622ca
+            widget: string
+          - hint: 'Original link: #why-us, key: c7c10a6'
+            label: Link
+            name: c7c10a6
+            widget: string
+          - hint: 'Original link: #contact, key: 6c80469d'
+            label: Link
+            name: 6c80469d
+            widget: string
+          - hint: >-
+              Original link: https://www.financialengineers.com/research, key:
+              19dc4676
+            label: Link
+            name: 19dc4676
+            widget: string
+          - hint: >-
+              Original link: https://www.financialengineers.com/#why-us, key:
+              -1b4bfb95
+            label: Link
+            name: '-1b4bfb95'
+            widget: string
+          - hint: >-
+              Original link: mailto:info@financialengineers.ch?subject=Contact,
+              key: 2885e1de
+            label: Link
+            name: 2885e1de
+            widget: string
+          - hint: >-
+              Original link: https://www.financialengineers.com/legal/imprint,
+              key: 49a5eb8
+            label: Link
+            name: 49a5eb8
+            widget: string
+          - hint: >-
+              Original link:
+              https://www.financialengineers.com/legal/privacy-policy, key:
+              -22215278
+            label: Link
+            name: '-22215278'
+            widget: string
+          - hint: 'Original link: #, key: 23'
+            label: Link
+            name: '23'
+            widget: string
+          - hint: >-
+              Original link: https://www.financialengineers.com/#contact, key:
+              -64b93488
+            label: Link
+            name: '-64b93488'
+            widget: string
+      - label: Images
+        name: images
+        file: cms/_data/images.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Images
+          - label: Image
+            name: i1ffa3f63
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: i59174415
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 413430a7
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: e51d1be
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 241fee59
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-208f6db'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 53c5c69f
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-4ee6c326'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-2b1beb3c'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 49943f65
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+publish_mode: editorial_workflow
