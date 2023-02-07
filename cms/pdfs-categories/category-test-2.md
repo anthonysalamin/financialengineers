@@ -1,11 +1,12 @@
 ---
-f_color-optional-set-by-the-designer: hsla(212.95774647887325, 60.17%, 53.73%, 1.00)
+f_color-optional-set-by-the-designer: '#42d08b'
 f_order: 1
 title: Global Macro
 slug: category-test-2
-updated-on: '2021-08-30T19:50:51.098Z'
+updated-on: '2023-02-07T19:14:37.866Z'
 created-on: '2021-08-17T18:27:49.638Z'
-published-on: '2021-08-30T19:51:01.585Z'
+published-on: '2023-02-07T19:26:10.340Z'
+f_color-light: hsla(150.8450704225352, 60.17%, 53.73%, 0.03)
 layout: '[pdfs-categories].html'
 tags: pdfs-categories
 ---

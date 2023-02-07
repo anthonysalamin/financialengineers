@@ -164,7 +164,14 @@ collections:
         required: false
       - hint: UI color of the category (optional, set by the designer)
         name: f_color-optional-set-by-the-designer
-        label: Color (optional, set by the designer)
+        label: Color
+        widget: color
+        required: false
+        enableAlpha: true
+        allowInput: true
+      - hint: ''
+        name: f_color-light
+        label: color light
         widget: color
         required: false
         enableAlpha: true
@@ -998,6 +1005,34 @@ collections:
             label: Text
             name: '47024107'
             widget: string
+          - hint: 'Original text: Highlight, key: 4ed7ac94'
+            label: Text
+            name: 4ed7ac94
+            widget: string
+          - hint: 'Original text: Precious metal, key: 5f1bac6b'
+            label: Text
+            name: 5f1bac6b
+            widget: string
+          - hint: 'Original text: Cryptocurrency, key: 37a95bf2'
+            label: Text
+            name: 37a95bf2
+            widget: string
+          - hint: 'Original text: Global macro, key: -74f97ed1'
+            label: Text
+            name: '-74f97ed1'
+            widget: string
+          - hint: 'Original text: FX, key: 8d2'
+            label: Text
+            name: 8d2
+            widget: string
+          - hint: 'Original text: Curated PDFs, key: -5beeecf1'
+            label: Text
+            name: '-5beeecf1'
+            widget: string
+          - hint: 'Original text: Download PDF, key: 4bce595a'
+            label: Text
+            name: 4bce595a
+            widget: string
       - label: Links
         name: links
         file: cms/_data/links.json
@@ -1110,6 +1145,10 @@ collections:
               -64b93488
             label: Link
             name: '-64b93488'
+            widget: string
+          - hint: 'Original link: #research, key: 3070eebe'
+            label: Link
+            name: 3070eebe
             widget: string
       - label: Images
         name: images
@@ -1303,6 +1342,19 @@ collections:
                 required: false
           - label: Image
             name: 49943f65
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-311b4baa'
             widget: object
             fields:
               - name: url

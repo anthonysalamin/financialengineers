@@ -6,9 +6,9 @@ slug: research
 tags: pages
 seo:
   noindex: false
-  title: PDF
-  og:title: PDF
-  twitter:title: PDF
+  title: Research
+  og:title: Research
+  twitter:title: Research
 ---
 
 
