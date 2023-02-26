@@ -1,7 +1,6 @@
 ---
 f_date: '2021-05-24T00:00:00.000Z'
 f_highlight: false
-f_author-optional: Berenberg
 title: BoE likely to start normalising policy in 2022
 f_pdf-file:
   url: >-

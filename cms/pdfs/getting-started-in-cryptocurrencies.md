@@ -1,7 +1,6 @@
 ---
 f_date: '2021-06-01T00:00:00.000Z'
 f_highlight: true
-f_author-optional: World Economic Forum
 title: Getting Started in Cryptocurrencies - WEF World Economic Forum
 f_pdf-file:
   url: >-

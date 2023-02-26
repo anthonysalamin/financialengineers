@@ -1,7 +1,6 @@
 ---
 f_date: '2021-05-25T00:00:00.000Z'
 f_highlight: true
-f_author-optional: Credit Suisse
 title: Taper Will Be Bullish
 f_pdf-file:
   url: >-

@@ -1,7 +1,6 @@
 ---
 f_date: '2021-05-25T00:00:00.000Z'
 f_highlight: false
-f_author-optional: Goldman Sachs
 title: Market Intelligence US Morning Update - Goldman Sachs
 slug: market-intelligence-us-morning-update-goldman-sachs
 f_pdf-file:

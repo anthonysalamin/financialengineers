@@ -256,14 +256,11 @@ collections:
         label: Date
         widget: datetime
         required: true
-      - hint: Who did the research / published the PDF ?
-        name: f_author-optional
-        label: Author (optional)
-        widget: string
-        required: false
-      - hint: Shared link from your Dropbox where the video is saved
+      - hint: >-
+          Share a folder link containing all the related PDFs (from
+          mediafire.com for example, or any cloud storage platform you see fit)
         name: f_video-dropbox-link-optional
-        label: Video dropbox link
+        label: Multiple PDFs link
         widget: string
         required: false
       - label: Tags
@@ -274,117 +271,6 @@ collections:
         widget: hidden
         name: layout
         default: '[pdfs].html'
-      - label: Publish Date
-        name: date
-        widget: datetime
-      - *ref_0
-  - name: legal
-    label: Single Pages
-    folder: cms/legal
-    create: true
-    identifier_field: name
-    extension: md
-    slug: '{{slug}}'
-    fields:
-      - hint: ''
-        name: title
-        label: Name
-        widget: string
-        required: true
-      - hint: ''
-        name: created-on
-        label: Created On
-        widget: datetime
-        required: false
-      - hint: ''
-        name: updated-on
-        label: Updated On
-        widget: datetime
-        required: false
-      - hint: ''
-        name: published-on
-        label: Published On
-        widget: datetime
-        required: false
-      - label: Imprint text
-        name: body
-        widget: markdown
-        required: false
-      - label: Tags
-        widget: hidden
-        name: tags
-        default: legal
-      - label: Layout
-        widget: hidden
-        name: layout
-        default: '[legal].html'
-      - label: Publish Date
-        name: date
-        widget: datetime
-      - *ref_0
-  - name: researches
-    label: Researches
-    folder: cms/researches
-    create: true
-    identifier_field: name
-    extension: md
-    slug: '{{slug}}'
-    fields:
-      - hint: ''
-        name: title
-        label: Name
-        widget: string
-        required: true
-      - hint: ''
-        name: created-on
-        label: Created On
-        widget: datetime
-        required: false
-      - hint: ''
-        name: updated-on
-        label: Updated On
-        widget: datetime
-        required: false
-      - hint: ''
-        name: published-on
-        label: Published On
-        widget: datetime
-        required: false
-      - hint: ''
-        name: f_short-description
-        label: Short description
-        widget: text
-        required: false
-      - hint: Please try use vector-based images (SVG), else JPG or PNG.
-        name: f_logo
-        label: Logo
-        widget: object
-        required: false
-        fields:
-          - hint: ''
-            name: url
-            label: Image
-            widget: image
-            required: false
-            allow_multiple: false
-          - hint: Image Alt
-            name: alt
-            label: alt
-            widget: string
-            required: false
-      - hint: ''
-        name: f_order
-        label: Order
-        widget: number
-        required: false
-      - label: Tags
-        widget: hidden
-        name: tags
-        default: researches
-      - label: Layout
-        widget: hidden
-        name: layout
-        default: '[researches].html'
       - label: Publish Date
         name: date
         widget: datetime
@@ -536,18 +422,6 @@ collections:
             name: title
             widget: hidden
             default: Texts
-          - hint: 'Original text: payment error - card declined, key: -4d6f3027'
-            label: Text
-            name: '-4d6f3027'
-            widget: string
-          - hint: 'Original text: We never collect user data. , key: 61895c95'
-            label: Text
-            name: 61895c95
-            widget: string
-          - hint: 'Original text: About, key: 3c2336d'
-            label: Text
-            name: 3c2336d
-            widget: string
           - hint: 'Original text: Expertise, key: 7f8f21f1'
             label: Text
             name: 7f8f21f1
@@ -556,17 +430,33 @@ collections:
             label: Text
             name: '-110fda45'
             widget: string
-          - hint: 'Original text: Why us, key: -65994dea'
+          - hint: 'Original text: Disclaimer, key: -6f68ae45'
             label: Text
-            name: '-65994dea'
+            name: '-6f68ae45'
             widget: string
-          - hint: 'Original text: Contact, key: -64104400'
+          - hint: 'Original text: Privacy Policy, key: -3fbde6f6'
             label: Text
-            name: '-64104400'
+            name: '-3fbde6f6'
             widget: string
-          - hint: 'Original text: Who we are, key: -47239b3c'
+          - hint: 'Original text: Fin-Tech is, key: -11d3590e'
             label: Text
-            name: '-47239b3c'
+            name: '-11d3590e'
+            widget: string
+          - hint: 'Original text: changing faster, key: 1b753d1c'
+            label: Text
+            name: 1b753d1c
+            widget: string
+          - hint: 'Original text: than ever, key: 2b60b03d'
+            label: Text
+            name: 2b60b03d
+            widget: string
+          - hint: 'Original text: Get up to speed by accessing our, key: -478ac67c'
+            label: Text
+            name: '-478ac67c'
+            widget: string
+          - hint: 'Original text: research and FAQ sections., key: 376afd48'
+            label: Text
+            name: 376afd48
             widget: string
           - hint: >-
               Original text: We are a global community of industry professionals
@@ -578,33 +468,179 @@ collections:
             label: Text
             name: '-6902e17e'
             widget: text
-          - hint: 'Original text: Our Expertise, key: 753475fd'
+          - hint: 'Original text: Our research, key: -575043f1'
             label: Text
-            name: 753475fd
+            name: '-575043f1'
+            widget: string
+          - hint: 'Original text: Our expertise, key: -23da9e3'
+            label: Text
+            name: '-23da9e3'
             widget: string
           - hint: 'Original text: No items found., key: 3d503d2b'
             label: Text
             name: 3d503d2b
             widget: string
-          - hint: >-
-              Original text: The world of Fin-Tech is evolving faster than ever.
-              , key: 52f4d1c4
+          - hint: 'Original text: Extensively researched ecosytems, key: 2ed21fcc'
             label: Text
-            name: 52f4d1c4
+            name: 2ed21fcc
             widget: string
           - hint: >-
-              Original text: Access our Research and FAQ sections , key:
-              -480cf736
+              Original text: MATIC, NEAR, TRX, AVAX, XTZ, ADA. The product of
+              our research is often used to improve the efficiency of business
+              processes and available resources, which is accomplished by
+              maximising their utility through superior methods of value
+              transfer using blockchain technology., key: 1aa127de
             label: Text
-            name: '-480cf736'
+            name: 1aa127de
+            widget: text
+          - hint: 'Original text: Error, key: 401e1e8'
+            label: Text
+            name: 401e1e8
             widget: string
-          - hint: 'Original text: to get up to speed, key: 3f8e88d8'
+          - hint: 'Original text: Error., key: 7c3a5b46'
             label: Text
-            name: 3f8e88d8
+            name: 7c3a5b46
             widget: string
-          - hint: 'Original text: 🔐 FAQ, key: 2a1935c9'
+          - hint: 'Original text: Currently researching ecosytems, key: 5a2f659b'
             label: Text
-            name: 2a1935c9
+            name: 5a2f659b
+            widget: string
+          - hint: >-
+              Original text: The product of our research is often used to
+              improve the efficiency of business processes and available
+              resources, which is accomplished by maximising their utility
+              through superior methods of value transfer using blockchain
+              technology., key: -1a123e44
+            label: Text
+            name: '-1a123e44'
+            widget: text
+          - hint: 'Original text: ICP, key: 11a76'
+            label: Text
+            name: 11a76
+            widget: string
+          - hint: 'Original text: Internet Computer, key: 1debd51a'
+            label: Text
+            name: 1debd51a
+            widget: string
+          - hint: >-
+              Original text: ICP smart contracts combine WebAssembly bytecode
+              with persistent on-chain memory, with gigabytes available –
+              supporting the creation of truly decentralized systems and
+              services that are 100% on-chain., key: 43b6f293
+            label: Text
+            name: 43b6f293
+            widget: text
+          - hint: 'Original text: QNT, key: 139d7'
+            label: Text
+            name: 139d7
+            widget: string
+          - hint: 'Original text: Quant, key: 4ac1923'
+            label: Text
+            name: 4ac1923
+            widget: string
+          - hint: >-
+              Original text: Quant is a blockchain technology platform that
+              enables businesses to easily build and deploy decentralized
+              applications (dApps) on top of multiple blockchains., key:
+              -3fb50ad8
+            label: Text
+            name: '-3fb50ad8'
+            widget: text
+          - hint: 'Original text: zkSync, key: -29c56294'
+            label: Text
+            name: '-29c56294'
+            widget: string
+          - hint: >-
+              Original text: zkSync is a layer-2 scaling solution for Ethereum
+              that uses zero-knowledge proofs to enable fast and inexpensive
+              transactions. By offloading transactions from the Ethereum mainnet
+              to a separate, more efficient network, zkSync is able to greatly
+              increase the transaction throughput and reduce the gas fees
+              associated with Ethereum transactions., key: 6ebd029e
+            label: Text
+            name: 6ebd029e
+            widget: text
+          - hint: 'Original text: IOTA, key: 226213'
+            label: Text
+            name: '226213'
+            widget: string
+          - hint: >-
+              Original text: IOTA is a distributed ledger technology that aims
+              to create a decentralized, feeless network for the Internet of
+              Things (IoT). Instead of using a traditional blockchain, IOTA uses
+              a unique technology called the Tangle, which allows for fast,
+              secure, and feeless transactions. This makes IOTA an attractive
+              option for micropayments and other IoT use cases where the cost of
+              transaction fees can be a significant barrier., key: -7a368c7e
+            label: Text
+            name: '-7a368c7e'
+            widget: text
+          - hint: 'Original text: RNDR, key: 2673ca'
+            label: Text
+            name: 2673ca
+            widget: string
+          - hint: 'Original text: Render Token, key: -22c89511'
+            label: Text
+            name: '-22c89511'
+            widget: string
+          - hint: >-
+              Original text: RNDR token is a cryptocurrency designed to power
+              the decentralized cloud rendering platform called RNDR. The
+              platform allows artists, designers, and other creators to render
+              high-quality 3D graphics and animations quickly and
+              cost-effectively by harnessing the power of decentralized
+              computing resources., key: 6673ec6
+            label: Text
+            name: 6673ec6
+            widget: text
+          - hint: 'Original text: AGIX, key: 1e9fd5'
+            label: Text
+            name: 1e9fd5
+            widget: string
+          - hint: 'Original text: SingularityNET, key: 1c0e9d06'
+            label: Text
+            name: 1c0e9d06
+            widget: string
+          - hint: >-
+              Original text: SingularityNET is a decentralized network for
+              artificial intelligence (AI) that aims to democratize access to AI
+              technology and services. The platform connects developers, service
+              providers, and users, enabling them to create and monetize AI
+              services through a decentralized marketplace., key: 661be251
+            label: Text
+            name: 661be251
+            widget: text
+          - hint: >-
+              Original text: The world of Fin-Tech is evolving faster than ever,
+              key: 3f7ca892
+            label: Text
+            name: 3f7ca892
+            widget: string
+          - hint: >-
+              Original text: Access our research and FAQ sections to get up to
+              speed., key: 3fee016c
+            label: Text
+            name: 3fee016c
+            widget: string
+          - hint: 'Original text: Access now, key: 32a8763a'
+            label: Text
+            name: 32a8763a
+            widget: string
+          - hint: 'Original text: feat, key: 2fe532'
+            label: Text
+            name: 2fe532
+            widget: string
+          - hint: 'Original text: LOCKED, key: -79d6d8f6'
+            label: Text
+            name: '-79d6d8f6'
+            widget: string
+          - hint: 'Original text: Download PDF, key: 4bce595a'
+            label: Text
+            name: 4bce595a
+            widget: string
+          - hint: 'Original text: Download PDFs, key: 2dfcd259'
+            label: Text
+            name: 2dfcd259
             widget: string
           - hint: 'Original text: Why us ?, key: -647d774b'
             label: Text
@@ -620,55 +656,21 @@ collections:
             label: Text
             name: '-60e1538e'
             widget: text
-          - hint: 'Original text: close, key: 5a5ddf8'
+          - hint: 'Original text: Peek at the frontier, key: -348b9afc'
             label: Text
-            name: 5a5ddf8
+            name: '-348b9afc'
             widget: string
-          - hint: >-
-              Original text: Thank you! Your submission has been received!, key:
-              5a0ea5a1
+          - hint: 'Original text: of innovation, key: 6133334e'
             label: Text
-            name: 5a0ea5a1
-            widget: string
-          - hint: >-
-              Original text: Oops! Something went wrong while submitting the
-              form., key: -7c112e99
-            label: Text
-            name: '-7c112e99'
-            widget: string
-          - hint: >-
-              Original text: Innovational solutions in the digital economy, key:
-              f7fdd82
-            label: Text
-            name: f7fdd82
-            widget: string
-          - hint: 'Original text: Your interest, key: -3ea46fa9'
-            label: Text
-            name: '-3ea46fa9'
-            widget: string
-          - hint: 'Original text: On-Chain Synthetic derivatives, key: -419477bc'
-            label: Text
-            name: '-419477bc'
-            widget: string
-          - hint: 'Original text: Stablecoin Staking, key: -178b0e1d'
-            label: Text
-            name: '-178b0e1d'
-            widget: string
-          - hint: 'Original text: Cross-Chain Liquidity, key: -18246c9a'
-            label: Text
-            name: '-18246c9a'
-            widget: string
-          - hint: 'Original text: © Financial Engineers, 2023, key: bc566c9'
-            label: Text
-            name: bc566c9
+            name: 6133334e
             widget: string
           - hint: 'Original text: Imprint, key: -29f92c17'
             label: Text
             name: '-29f92c17'
             widget: string
-          - hint: 'Original text: Privacy Policy, key: -3fbde6f6'
+          - hint: 'Original text: We never collect user data. , key: 61895c95'
             label: Text
-            name: '-3fbde6f6'
+            name: 61895c95
             widget: string
           - hint: 'Original text: Page Not Found, key: -40b0787c'
             label: Text
@@ -679,10 +681,6 @@ collections:
               been moved, key: 556d64d8
             label: Text
             name: 556d64d8
-            widget: string
-          - hint: 'Original text: 🔐 Request access, key: 73a2f82'
-            label: Text
-            name: 73a2f82
             widget: string
           - hint: 'Original text: Oops, wrong password., key: -9585757'
             label: Text
@@ -716,54 +714,112 @@ collections:
             label: Text
             name: 8d2
             widget: string
-          - hint: 'Original text: You have questions?, key: -6583b7d7'
+          - hint: 'Original text: What’s a Rich Text element?, key: -3c0dda4d'
             label: Text
-            name: '-6583b7d7'
+            name: '-3c0dda4d'
             widget: string
-          - hint: 'Original text: We have answers., key: -6b6defa1'
+          - hint: >-
+              Original text: The rich text element allows you to create and
+              format headings, paragraphs, blockquotes, images, and video all in
+              one place instead of having to add and format them individually.
+              Just double-click and easily create content., key: 2e633c6a
             label: Text
-            name: '-6b6defa1'
+            name: 2e633c6a
+            widget: text
+          - hint: 'Original text: Static and dynamic content editing, key: 57fa6135'
+            label: Text
+            name: 57fa6135
+            widget: string
+          - hint: >-
+              Original text: A rich text element can be used with static or
+              dynamic content. For static content, just drop it into any page
+              and begin editing. For dynamic content, add a rich text field to
+              any collection and then connect a rich text element to that field
+              in the settings panel. Voila!, key: -a016b40
+            label: Text
+            name: '-a016b40'
+            widget: text
+          - hint: >-
+              Original text: How to customize formatting for each rich text,
+              key: -4bffb26e
+            label: Text
+            name: '-4bffb26e'
+            widget: string
+          - hint: >-
+              Original text: Headings, paragraphs, blockquotes, figures, images,
+              and figure captions can all be styled after a class is added to
+              the rich text element using the "When inside of" nested selector
+              system., key: -43ba1153
+            label: Text
+            name: '-43ba1153'
+            widget: text
+          - hint: 'Original text: Text Link, key: 3610230d'
+            label: Text
+            name: 3610230d
+            widget: string
+          - hint: >-
+              Original text: Thank you! Your submission has been received!, key:
+              5a0ea5a1
+            label: Text
+            name: 5a0ea5a1
+            widget: string
+          - hint: >-
+              Original text: Oops! Something went wrong while submitting the
+              form., key: -7c112e99
+            label: Text
+            name: '-7c112e99'
             widget: string
           - hint: 'Original text: FAQ, key: 10ef6'
             label: Text
             name: 10ef6
             widget: string
-          - hint: 'Original text: Frequently Asked Questions, key: -475b7d60'
-            label: Text
-            name: '-475b7d60'
-            widget: string
           - hint: >-
               Original text: Use this catalog for the opportunity to browse
               through a highly curated list of PDFs from our vast pipeline of
-              reports:, key: -34f2bba9
+              reports., key: -34f2bbb5
             label: Text
-            name: '-34f2bba9'
+            name: '-34f2bbb5'
             widget: text
           - hint: 'Original text: Curated PDFs, key: -5beeecf1'
             label: Text
             name: '-5beeecf1'
             widget: string
-          - hint: 'Original text: feat, key: 2fe532'
+          - hint: 'Original text: Où trouver l''atelier ?, key: 1cadf5c9'
             label: Text
-            name: 2fe532
-            widget: string
-          - hint: 'Original text: Download PDF, key: 4bce595a'
-            label: Text
-            name: 4bce595a
+            name: 1cadf5c9
             widget: string
           - hint: >-
-              Original text: The product of our research is often used to
-              improve the efficiency of business processes and available
-              resources, which is accomplished by maximising their utility
-              through superior methods of value transfer using blockchain
-              technology., key: -1a123e44
+              Original text: Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat., key: -1dfbea35
             label: Text
-            name: '-1a123e44'
+            name: '-1dfbea35'
             widget: text
-          - hint: 'Original text: Currently Researching, key: 36dfa7cd'
+          - hint: 'Original text: Comment nous contacter ?, key: -17e98d14'
             label: Text
-            name: 36dfa7cd
+            name: '-17e98d14'
             widget: string
+          - hint: 'Original text: Quel est le prix d''une racine ?, key: -3e4363c7'
+            label: Text
+            name: '-3e4363c7'
+            widget: string
+          - hint: 'Original text: Qui est Urbain Salamin ?, key: 293605e4'
+            label: Text
+            name: '293605e4'
+            widget: string
+          - hint: 'Original text: Ooops, no items found., key: 3901bee5'
+            label: Text
+            name: 3901bee5
+            widget: string
+          - hint: >-
+              Original text: Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris., key: 4a367c84
+            label: Text
+            name: 4a367c84
+            widget: text
       - label: Links
         name: links
         file: cms/_data/links.json
@@ -772,74 +828,35 @@ collections:
             name: title
             widget: hidden
             default: Links
-          - hint: >-
-              Original link: https://www.financialengineers.com/#about, key:
-              -7df93f1b
+          - hint: 'Original link: /, key: 2f'
             label: Link
-            name: '-7df93f1b'
+            name: 2f
             widget: string
-          - hint: >-
-              Original link: https://www.financialengineers.com/#expertise, key:
-              5603369
+          - hint: 'Original link: #expertise, key: 6e27794e'
             label: Link
-            name: '5603369'
+            name: 6e27794e
             widget: string
           - hint: 'Original link: #research, key: 3070eebe'
             label: Link
             name: 3070eebe
             widget: string
-          - hint: 'Original link: #why-us, key: c7c10a6'
-            label: Link
-            name: c7c10a6
-            widget: string
-          - hint: 'Original link: #contact, key: 6c80469d'
-            label: Link
-            name: 6c80469d
-            widget: string
-          - hint: >-
-              Original link: https://www.financialengineers.com/research, key:
-              19dc4676
-            label: Link
-            name: 19dc4676
-            widget: string
-          - hint: >-
-              Original link: https://www.financialengineers.com/#why-us, key:
-              -1b4bfb95
-            label: Link
-            name: '-1b4bfb95'
-            widget: string
-          - hint: >-
-              Original link: mailto:info@financialengineers.ch?subject=Contact,
-              key: 2885e1de
-            label: Link
-            name: 2885e1de
-            widget: string
           - hint: 'Original link: /research, key: 23a622ca'
             label: Link
             name: 23a622ca
+            widget: string
+          - hint: 'Original link: #, key: 23'
+            label: Link
+            name: '23'
+            widget: string
+          - hint: 'Original link: #faq, key: 117413'
+            label: Link
+            name: '117413'
             widget: string
           - hint: >-
               Original link: https://www.financialengineers.com/legal/imprint,
               key: 49a5eb8
             label: Link
             name: 49a5eb8
-            widget: string
-          - hint: >-
-              Original link:
-              https://www.financialengineers.com/legal/privacy-policy, key:
-              -22215278
-            label: Link
-            name: '-22215278'
-            widget: string
-          - hint: 'Original link: #, key: 23'
-            label: Link
-            name: '23'
-            widget: string
-          - hint: >-
-              Original link: https://www.financialengineers.com/#contact, key:
-              -64b93488
-            label: Link
-            name: '-64b93488'
             widget: string
       - label: Images
         name: images
@@ -850,7 +867,7 @@ collections:
             widget: hidden
             default: Images
           - label: Image
-            name: i1ffa3f63
+            name: '419625e4'
             widget: object
             fields:
               - name: url
@@ -863,59 +880,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: i59174415
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: 413430a7
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: e51d1be
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: 241fee59
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: '-208f6db'
+            name: i31bcdf06
             widget: object
             fields:
               - name: url
@@ -941,6 +906,188 @@ collections:
                 widget: string
                 required: false
           - label: Image
+            name: '-33baf72d'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 30d6d84d
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-580a5326'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-2a4bb768'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-726e18ca'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 12e37d9c
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-7c866cf7'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: c57d2cd
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 4e460ed2
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 87595b3
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 5325613c
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-136c2fd'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 566f9b3a
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 70cc9c5
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
             name: '-4ee6c326'
             widget: object
             fields:
@@ -954,33 +1101,20 @@ collections:
                 widget: string
                 required: false
           - label: Image
+            name: e51d1be
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
             name: '-2b1beb3c'
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: 49943f65
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: '-311b4baa'
             widget: object
             fields:
               - name: url

@@ -1,7 +1,6 @@
 ---
 f_date: '2021-05-21T00:00:00.000Z'
 f_highlight: false
-f_author-optional: Goldman Sachs
 title: GS Global FX Trader Research - Goldman Sachs
 slug: gs-global-fx-trader-research-goldman-sachs
 f_pdf-file:

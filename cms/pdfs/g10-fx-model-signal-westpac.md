@@ -1,7 +1,6 @@
 ---
 f_date: '2021-05-01T00:00:00.000Z'
 f_highlight: false
-f_author-optional: Westpac
 title: G10 FX Model Signal - Westpac
 slug: g10-fx-model-signal-westpac
 f_pdf-file:

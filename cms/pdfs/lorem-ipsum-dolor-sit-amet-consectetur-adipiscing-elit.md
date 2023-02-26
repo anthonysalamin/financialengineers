@@ -1,7 +1,6 @@
 ---
 f_date: '2021-05-25T00:00:00.000Z'
 f_highlight: true
-f_author-optional: Curvature
 title: Where do rates go from here - Curvature
 f_pdf-file:
   url: >-

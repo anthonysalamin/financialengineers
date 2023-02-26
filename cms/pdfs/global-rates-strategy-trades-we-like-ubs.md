@@ -1,7 +1,6 @@
 ---
 f_date: '2021-05-21T00:00:00.000Z'
 f_highlight: false
-f_author-optional: UBS
 title: Global Rates Strategy Trades We Like - UBS
 slug: global-rates-strategy-trades-we-like-ubs
 f_pdf-file:

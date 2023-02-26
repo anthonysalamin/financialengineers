@@ -1,0 +1,18 @@
+<svg id="Component_71_1" data-name="Component 71 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.254" y1="1.717" x2="0.941" y2="0.889" gradientUnits="objectBoundingBox">
+      <stop offset="0.21" stop-color="#f15a24"/>
+      <stop offset="0.684" stop-color="#fbb03b"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.746" y1="0.511" x2="0.059" y2="1.339" gradientUnits="objectBoundingBox">
+      <stop offset="0.21" stop-color="#ed1e79"/>
+      <stop offset="0.893" stop-color="#522785"/>
+    </linearGradient>
+  </defs>
+  <rect id="Rectangle_2155" data-name="Rectangle 2155" width="32" height="32" fill="none"/>
+  <g id="internet-computer-icp-logo" transform="translate(0 8)">
+    <path id="Path_4805" data-name="Path 4805" d="M187.352,0c-1.784,0-3.738.972-5.8,2.89A25.42,25.42,0,0,0,179.1,5.549s1,1.151,2.1,2.391a24.637,24.637,0,0,1,2.435-2.685c1.829-1.713,3.024-2.061,3.711-2.061A4.744,4.744,0,0,1,192,8.02a4.779,4.779,0,0,1-4.657,4.826,2.3,2.3,0,0,1-.446-.054,5.7,5.7,0,0,0,2.319.6c4.71,0,5.638-3.256,5.692-3.488a8.53,8.53,0,0,0,.214-1.865A7.923,7.923,0,0,0,187.352,0Z" transform="translate(-163.122)" fill="url(#linear-gradient)"/>
+    <path id="Path_4806" data-name="Path 4806" d="M7.77,43.09c1.784,0,3.738-.972,5.8-2.89a25.425,25.425,0,0,0,2.453-2.658s-1-1.151-2.1-2.391a24.639,24.639,0,0,1-2.435,2.685C9.662,39.531,8.457,39.9,7.779,39.9a4.829,4.829,0,0,1,0-9.653,2.3,2.3,0,0,1,.446.054,5.7,5.7,0,0,0-2.319-.6C1.2,29.691.268,32.947.214,33.188A8.531,8.531,0,0,0,0,35.052,7.911,7.911,0,0,0,7.77,43.09Z" transform="translate(0 -27.05)" fill="url(#linear-gradient-2)"/>
+    <path id="Path_4807" data-name="Path 4807" d="M13.816,5.326c-.517-.5-3.033-2.543-5.442-2.614C4.074,2.6,2.816,5.727,2.7,6.129A7.874,7.874,0,0,1,10.238,0c2.971,0,5.977,2.917,8.2,5.549l.009-.009s1,1.151,2.1,2.391c0,0,1.249,1.472,2.569,2.766.517.5,3.024,2.516,5.433,2.587,4.416.125,5.638-3.176,5.7-3.426A7.857,7.857,0,0,1,26.7,16.022c-2.971,0-5.977-2.917-8.207-5.549,0,.009-.009.009-.009.018s-1-1.151-2.1-2.391C16.394,8.1,15.145,6.619,13.816,5.326ZM2.7,6.164a.033.033,0,0,1,.009-.027A.033.033,0,0,0,2.7,6.164Z" transform="translate(-2.459)" fill="#29abe2" fill-rule="evenodd"/>
+  </g>
+</svg>

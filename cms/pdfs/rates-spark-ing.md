@@ -1,7 +1,6 @@
 ---
 f_date: '2021-05-24T00:00:00.000Z'
 f_highlight: false
-f_author-optional: ING
 title: Rates Spark - ING
 slug: rates-spark-ing
 f_pdf-file:

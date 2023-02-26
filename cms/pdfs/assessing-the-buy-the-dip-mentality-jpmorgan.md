@@ -1,7 +1,6 @@
 ---
 f_date: '2021-05-21T00:00:00.000Z'
 f_highlight: false
-f_author-optional: JPMorgan
 title: Assessing the “buy the dip” mentality - JPMorgan
 slug: assessing-the-buy-the-dip-mentality-jpmorgan
 f_pdf-file:
