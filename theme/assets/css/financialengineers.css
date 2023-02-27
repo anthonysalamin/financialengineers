@@ -32,6 +32,7 @@ a {
 }
 
 .section {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -107,6 +108,10 @@ a {
 .section.video {
   position: relative;
   height: 100vh;
+}
+
+.section.test {
+  background-color: #ee8f8f;
 }
 
 .container {
@@ -1044,7 +1049,10 @@ a {
   right: 0%;
   bottom: 0%;
   z-index: 9999;
-  display: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
   height: 100vh;
   -webkit-box-pack: center;
@@ -1436,6 +1444,8 @@ a {
 }
 
 .cta-wrap-glass {
+  position: relative;
+  z-index: 1;
   padding: 40px;
   border-style: solid;
   border-width: 1px;
@@ -1994,6 +2004,13 @@ a {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.embed-cursor {
+  position: absolute;
+  z-index: 99;
+  width: 40px;
+  height: 40px;
 }
 
 @media screen and (max-width: 991px) {
@@ -2595,13 +2612,13 @@ a {
   }
 
   .wrap-window {
-    height: 600px;
+    height: 500px;
     margin-bottom: 40px;
     padding: 40px;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
