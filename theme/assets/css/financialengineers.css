@@ -1253,6 +1253,10 @@ a {
   background-color: #0b6cfe;
 }
 
+.cta.full.right-margin.footer.twitter {
+  box-shadow: 0 0 20px 5px rgba(11, 108, 254, 0.57);
+}
+
 .cta.full.small-top-margin {
   margin-top: 40px;
 }
@@ -1683,6 +1687,11 @@ a {
 
 .logo {
   height: 32px;
+}
+
+.logo.footer-vd {
+  height: 80px;
+  margin-left: -16px;
 }
 
 .researching__container {
@@ -2729,6 +2738,10 @@ a {
     height: 24px;
   }
 
+  .logo.footer-vd {
+    margin-bottom: 32px;
+  }
+
   .roadmap__sticky-collection-list-wrapper {
     margin-bottom: 80px;
   }
@@ -3026,6 +3039,10 @@ a {
 
   .cta-wrap-glass.top-margin {
     margin-top: 32px;
+  }
+
+  .logo.footer-vd {
+    margin-bottom: 16px;
   }
 
   .roadmap__sticky-collection-list-wrapper {

@@ -655,10 +655,6 @@ collections:
             label: Text
             name: 60d28782
             widget: string
-          - hint: 'Original text: Our research, key: -575043f1'
-            label: Text
-            name: '-575043f1'
-            widget: string
           - hint: 'Original text: Error, key: 401e1e8'
             label: Text
             name: 401e1e8
@@ -826,10 +822,6 @@ collections:
             label: Text
             name: 3610230d
             widget: string
-          - hint: 'Original text: FAQ, key: 10ef6'
-            label: Text
-            name: 10ef6
-            widget: string
           - hint: 'Original text: changing faster, key: 1b753d1c'
             label: Text
             name: 1b753d1c
@@ -843,6 +835,10 @@ collections:
               3dae64be
             label: Text
             name: 3dae64be
+            widget: string
+          - hint: 'Original text: FAQ, key: 10ef6'
+            label: Text
+            name: 10ef6
             widget: string
           - hint: 'Original text: Curated PDFs, key: -5beeecf1'
             label: Text
@@ -889,6 +885,10 @@ collections:
             label: Text
             name: '-1a123e44'
             widget: text
+          - hint: 'Original text: Our research, key: -575043f1'
+            label: Text
+            name: '-575043f1'
+            widget: string
           - hint: 'Original text: ICP, key: 11a76'
             label: Text
             name: 11a76
@@ -1120,6 +1120,19 @@ collections:
                 required: false
           - label: Image
             name: '-662aaee3'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-1fd5575'
             widget: object
             fields:
               - name: url
