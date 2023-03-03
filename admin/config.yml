@@ -80,6 +80,189 @@ collections:
             name: additional_tags
             widget: text
             required: false
+  - name: general_texts
+    label: General texts
+    folder: cms/general-texts
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_text
+        label: text
+        widget: string
+        required: false
+      - hint: Please do not change that number
+        name: f_order
+        label: order
+        widget: number
+        required: true
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: general-texts
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[general-texts].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - name: researched
+    label: Researched ecosystems
+    folder: cms/researched
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: Please try use SVG format
+        name: f_thumbnail
+        label: thumbnail
+        widget: object
+        required: true
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: true
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: order at which the cards appear, from smallest to largest
+        name: f_order
+        label: order
+        widget: number
+        required: true
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: researched
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[researched].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - name: researching
+    label: Researching ecosystems
+    folder: cms/researching
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - label: short paragraph
+        name: body
+        widget: markdown
+        required: false
+      - hint: ''
+        name: f_subline
+        label: subline
+        widget: string
+        required: true
+      - hint: Please try use SVG format at a resolution of 32px by 32px
+        name: f_thumbnail
+        label: thumbnail
+        widget: object
+        required: false
+        fields:
+          - hint: ''
+            name: url
+            label: Image
+            widget: image
+            required: false
+            allow_multiple: false
+          - hint: Image Alt
+            name: alt
+            label: alt
+            widget: string
+            required: false
+      - hint: order at which the cards appear, from smallest to largest
+        name: f_order
+        label: order
+        widget: number
+        required: true
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: researching
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[researching].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
   - name: faqs
     label: FAQs
     folder: cms/faqs
@@ -134,9 +317,9 @@ collections:
         name: date
         widget: datetime
       - *ref_0
-  - name: pdfs_categories
-    label: PDFs categories
-    folder: cms/pdfs-categories
+  - name: pdf_categories
+    label: PDF categories
+    folder: cms/pdf-categories
     create: true
     identifier_field: name
     extension: md
@@ -184,11 +367,11 @@ collections:
       - label: Tags
         widget: hidden
         name: tags
-        default: pdfs-categories
+        default: pdf-categories
       - label: Layout
         widget: hidden
         name: layout
-        default: '[pdfs-categories].html'
+        default: '[pdf-categories].html'
       - label: Publish Date
         name: date
         widget: datetime
@@ -238,8 +421,8 @@ collections:
         label: Category
         widget: relation
         required: true
-        collection: pdfs_categories
-        value_field: cms/pdfs-categories/{{slug}}.md
+        collection: pdf_categories
+        value_field: cms/pdf-categories/{{slug}}.md
         search_fields:
           - slug
           - name
@@ -276,7 +459,7 @@ collections:
         widget: datetime
       - *ref_0
   - name: expertise
-    label: Expertises
+    label: Expertise fields
     folder: cms/expertise
     create: true
     identifier_field: name
@@ -426,9 +609,9 @@ collections:
             label: Text
             name: 7f8f21f1
             widget: string
-          - hint: 'Original text: Research, key: -110fda45'
+          - hint: 'Original text: Contact, key: -64104400'
             label: Text
-            name: '-110fda45'
+            name: '-64104400'
             widget: string
           - hint: 'Original text: Disclaimer, key: -6f68ae45'
             label: Text
@@ -442,186 +625,54 @@ collections:
             label: Text
             name: '-11d3590e'
             widget: string
-          - hint: 'Original text: changing faster, key: 1b753d1c'
+          - hint: 'Original text: elvolving faster, key: 520712b1'
             label: Text
-            name: 1b753d1c
+            name: 520712b1
             widget: string
           - hint: 'Original text: than ever, key: 2b60b03d'
             label: Text
             name: 2b60b03d
             widget: string
-          - hint: 'Original text: Get up to speed by accessing our, key: -478ac67c'
-            label: Text
-            name: '-478ac67c'
-            widget: string
-          - hint: 'Original text: research and FAQ sections., key: 376afd48'
-            label: Text
-            name: 376afd48
-            widget: string
           - hint: >-
-              Original text: We are a global community of industry professionals
-              focusing our collective experience to analyse frontier financial
-              markets. Our network includes investment companies, family offices
-              and early adopters of blockchain technology, all of whom today
-              possess invaluable experience and information access in the
-              cryptocurrency industry., key: -6902e17e
+              Original text: Get up to speed by engaging with our members and
+              accessing their experience , key: 779321ec
             label: Text
-            name: '-6902e17e'
-            widget: text
-          - hint: 'Original text: Our research, key: -575043f1'
-            label: Text
-            name: '-575043f1'
+            name: 779321ec
             widget: string
-          - hint: 'Original text: Our expertise, key: -23da9e3'
+          - hint: 'Original text: Access, key: 748ca184'
             label: Text
-            name: '-23da9e3'
+            name: 748ca184
             widget: string
           - hint: 'Original text: No items found., key: 3d503d2b'
             label: Text
             name: 3d503d2b
             widget: string
-          - hint: 'Original text: Extensively researched ecosytems, key: 2ed21fcc'
+          - hint: 'Original text: Get in touch, key: -5230a9d2'
             label: Text
-            name: 2ed21fcc
+            name: '-5230a9d2'
             widget: string
-          - hint: >-
-              Original text: MATIC, NEAR, TRX, AVAX, XTZ, ADA. The product of
-              our research is often used to improve the efficiency of business
-              processes and available resources, which is accomplished by
-              maximising their utility through superior methods of value
-              transfer using blockchain technology., key: 1aa127de
+          - hint: 'Original text: Areas of expertise, key: 60d28782'
             label: Text
-            name: 1aa127de
-            widget: text
+            name: 60d28782
+            widget: string
+          - hint: 'Original text: Our research, key: -575043f1'
+            label: Text
+            name: '-575043f1'
+            widget: string
           - hint: 'Original text: Error, key: 401e1e8'
             label: Text
             name: 401e1e8
             widget: string
-          - hint: 'Original text: Error., key: 7c3a5b46'
-            label: Text
-            name: 7c3a5b46
-            widget: string
-          - hint: 'Original text: Currently researching ecosytems, key: 5a2f659b'
-            label: Text
-            name: 5a2f659b
-            widget: string
-          - hint: >-
-              Original text: The product of our research is often used to
-              improve the efficiency of business processes and available
-              resources, which is accomplished by maximising their utility
-              through superior methods of value transfer using blockchain
-              technology., key: -1a123e44
-            label: Text
-            name: '-1a123e44'
-            widget: text
-          - hint: 'Original text: ICP, key: 11a76'
-            label: Text
-            name: 11a76
-            widget: string
-          - hint: 'Original text: Internet Computer, key: 1debd51a'
-            label: Text
-            name: 1debd51a
-            widget: string
-          - hint: >-
-              Original text: ICP smart contracts combine WebAssembly bytecode
-              with persistent on-chain memory, with gigabytes available –
-              supporting the creation of truly decentralized systems and
-              services that are 100% on-chain., key: 43b6f293
-            label: Text
-            name: 43b6f293
-            widget: text
-          - hint: 'Original text: QNT, key: 139d7'
-            label: Text
-            name: 139d7
-            widget: string
-          - hint: 'Original text: Quant, key: 4ac1923'
-            label: Text
-            name: 4ac1923
-            widget: string
-          - hint: >-
-              Original text: Quant is a blockchain technology platform that
-              enables businesses to easily build and deploy decentralized
-              applications (dApps) on top of multiple blockchains., key:
-              -3fb50ad8
-            label: Text
-            name: '-3fb50ad8'
-            widget: text
-          - hint: 'Original text: zkSync, key: -29c56294'
-            label: Text
-            name: '-29c56294'
-            widget: string
-          - hint: >-
-              Original text: zkSync is a layer-2 scaling solution for Ethereum
-              that uses zero-knowledge proofs to enable fast and inexpensive
-              transactions. By offloading transactions from the Ethereum mainnet
-              to a separate, more efficient network, zkSync is able to greatly
-              increase the transaction throughput and reduce the gas fees
-              associated with Ethereum transactions., key: 6ebd029e
-            label: Text
-            name: 6ebd029e
-            widget: text
-          - hint: 'Original text: IOTA, key: 226213'
-            label: Text
-            name: '226213'
-            widget: string
-          - hint: >-
-              Original text: IOTA is a distributed ledger technology that aims
-              to create a decentralized, feeless network for the Internet of
-              Things (IoT). Instead of using a traditional blockchain, IOTA uses
-              a unique technology called the Tangle, which allows for fast,
-              secure, and feeless transactions. This makes IOTA an attractive
-              option for micropayments and other IoT use cases where the cost of
-              transaction fees can be a significant barrier., key: -7a368c7e
-            label: Text
-            name: '-7a368c7e'
-            widget: text
-          - hint: 'Original text: RNDR, key: 2673ca'
-            label: Text
-            name: 2673ca
-            widget: string
-          - hint: 'Original text: Render Token, key: -22c89511'
-            label: Text
-            name: '-22c89511'
-            widget: string
-          - hint: >-
-              Original text: RNDR token is a cryptocurrency designed to power
-              the decentralized cloud rendering platform called RNDR. The
-              platform allows artists, designers, and other creators to render
-              high-quality 3D graphics and animations quickly and
-              cost-effectively by harnessing the power of decentralized
-              computing resources., key: 6673ec6
-            label: Text
-            name: 6673ec6
-            widget: text
-          - hint: 'Original text: AGIX, key: 1e9fd5'
-            label: Text
-            name: 1e9fd5
-            widget: string
-          - hint: 'Original text: SingularityNET, key: 1c0e9d06'
-            label: Text
-            name: 1c0e9d06
-            widget: string
-          - hint: >-
-              Original text: SingularityNET is a decentralized network for
-              artificial intelligence (AI) that aims to democratize access to AI
-              technology and services. The platform connects developers, service
-              providers, and users, enabling them to create and monetize AI
-              services through a decentralized marketplace., key: 661be251
-            label: Text
-            name: 661be251
-            widget: text
           - hint: >-
               Original text: The world of Fin-Tech is evolving faster than ever,
               key: 3f7ca892
             label: Text
             name: 3f7ca892
             widget: string
-          - hint: >-
-              Original text: Access our research and FAQ sections to get up to
-              speed., key: 3fee016c
+          - hint: "Original text: Our research section compiles reliable information by aggregating professional reports from curated sources\_, key: -7f31e077"
             label: Text
-            name: 3fee016c
-            widget: string
+            name: '-7f31e077'
+            widget: text
           - hint: 'Original text: Access now, key: 32a8763a'
             label: Text
             name: 32a8763a
@@ -642,27 +693,45 @@ collections:
             label: Text
             name: 2dfcd259
             widget: string
-          - hint: 'Original text: Why us ?, key: -647d774b'
+          - hint: 'Original text: Select your interest, key: -41746b8d'
             label: Text
-            name: '-647d774b'
+            name: '-41746b8d'
             widget: string
-          - hint: >-
-              Original text: Seeking to bridge the requirements of regulated
-              financial institutions with investment opportunities created by
-              cutting edge fin-tech projects, we approach our research in a
-              pragmatic and transparent manner, allowing our members to receive
-              the most competent roadmap for evolving their business in the
-              digital economy., key: -60e1538e
+          - hint: 'Original text: On-Chain Synthetic derivatives, key: -419477bc'
             label: Text
-            name: '-60e1538e'
-            widget: text
-          - hint: 'Original text: Peek at the frontier, key: -348b9afc'
-            label: Text
-            name: '-348b9afc'
+            name: '-419477bc'
             widget: string
-          - hint: 'Original text: of innovation, key: 6133334e'
+          - hint: 'Original text: Stablecoin Staking, key: -178b0e1d'
             label: Text
-            name: 6133334e
+            name: '-178b0e1d'
+            widget: string
+          - hint: 'Original text: Cross-Chain Liquidity, key: -18246c9a'
+            label: Text
+            name: '-18246c9a'
+            widget: string
+          - hint: 'Original text: We will get back to you !, key: 760d1eee'
+            label: Text
+            name: 760d1eee
+            widget: string
+          - hint: 'Original text: Something went wrong., key: 765b0de7'
+            label: Text
+            name: 765b0de7
+            widget: string
+          - hint: 'Original text: We are global., key: -78014b13'
+            label: Text
+            name: '-78014b13'
+            widget: string
+          - hint: 'Original text: Twitter, key: 2c9a4253'
+            label: Text
+            name: 2c9a4253
+            widget: string
+          - hint: 'Original text: Coming soon, key: cdb031a'
+            label: Text
+            name: cdb031a
+            widget: string
+          - hint: 'Original text: Research, key: -110fda45'
+            label: Text
+            name: '-110fda45'
             widget: string
           - hint: 'Original text: Imprint, key: -29f92c17'
             label: Text
@@ -757,29 +826,24 @@ collections:
             label: Text
             name: 3610230d
             widget: string
-          - hint: >-
-              Original text: Thank you! Your submission has been received!, key:
-              5a0ea5a1
-            label: Text
-            name: 5a0ea5a1
-            widget: string
-          - hint: >-
-              Original text: Oops! Something went wrong while submitting the
-              form., key: -7c112e99
-            label: Text
-            name: '-7c112e99'
-            widget: string
           - hint: 'Original text: FAQ, key: 10ef6'
             label: Text
             name: 10ef6
             widget: string
-          - hint: >-
-              Original text: Use this catalog for the opportunity to browse
-              through a highly curated list of PDFs from our vast pipeline of
-              reports., key: -34f2bbb5
+          - hint: 'Original text: changing faster, key: 1b753d1c'
             label: Text
-            name: '-34f2bbb5'
-            widget: text
+            name: 1b753d1c
+            widget: string
+          - hint: 'Original text: Get up to speed by engaging with our, key: 22ac874e'
+            label: Text
+            name: 22ac874e
+            widget: string
+          - hint: >-
+              Original text: members and accessing their experience , key:
+              3dae64be
+            label: Text
+            name: 3dae64be
+            widget: string
           - hint: 'Original text: Curated PDFs, key: -5beeecf1'
             label: Text
             name: '-5beeecf1'
@@ -812,6 +876,43 @@ collections:
             label: Text
             name: 3901bee5
             widget: string
+          - hint: 'Original text: Currently researching ecosytems, key: 5a2f659b'
+            label: Text
+            name: 5a2f659b
+            widget: string
+          - hint: >-
+              Original text: The product of our research is often used to
+              improve the efficiency of business processes and available
+              resources, which is accomplished by maximising their utility
+              through superior methods of value transfer using blockchain
+              technology., key: -1a123e44
+            label: Text
+            name: '-1a123e44'
+            widget: text
+          - hint: 'Original text: ICP, key: 11a76'
+            label: Text
+            name: 11a76
+            widget: string
+          - hint: 'Original text: Internet Computer, key: 1debd51a'
+            label: Text
+            name: 1debd51a
+            widget: string
+          - hint: >-
+              Original text: ICP smart contracts combine WebAssembly bytecode
+              with persistent on-chain memory, with gigabytes available –
+              supporting the creation of truly decentralized systems and
+              services that are 100% on-chain., key: 43b6f293
+            label: Text
+            name: 43b6f293
+            widget: text
+          - hint: 'Original text: QNT, key: 139d7'
+            label: Text
+            name: 139d7
+            widget: string
+          - hint: 'Original text: Quant, key: 4ac1923'
+            label: Text
+            name: 4ac1923
+            widget: string
           - hint: >-
               Original text: Lorem ipsum dolor sit amet, consectetur adipiscing
               elit, sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -820,6 +921,55 @@ collections:
             label: Text
             name: 4a367c84
             widget: text
+          - hint: 'Original text: zkSync, key: -29c56294'
+            label: Text
+            name: '-29c56294'
+            widget: string
+          - hint: 'Original text: IOTA, key: 226213'
+            label: Text
+            name: '226213'
+            widget: string
+          - hint: 'Original text: RNDR, key: 2673ca'
+            label: Text
+            name: 2673ca
+            widget: string
+          - hint: 'Original text: Render Token, key: -22c89511'
+            label: Text
+            name: '-22c89511'
+            widget: string
+          - hint: 'Original text: AGIX, key: 1e9fd5'
+            label: Text
+            name: 1e9fd5
+            widget: string
+          - hint: 'Original text: SingularityNET, key: 1c0e9d06'
+            label: Text
+            name: 1c0e9d06
+            widget: string
+          - hint: 'Original text: Error., key: 7c3a5b46'
+            label: Text
+            name: 7c3a5b46
+            widget: string
+          - hint: 'Original text: Extensively researched ecosytems, key: 2ed21fcc'
+            label: Text
+            name: 2ed21fcc
+            widget: string
+          - hint: >-
+              Original text: MATIC, NEAR, TRX, AVAX, XTZ, ADA. The product of
+              our research is often used to improve the efficiency of business
+              processes and available resources, which is accomplished by
+              maximising their utility through superior methods of value
+              transfer using blockchain technology., key: 1aa127de
+            label: Text
+            name: 1aa127de
+            widget: text
+          - hint: 'Original text: Get up to speed by accessing our, key: -478ac67c'
+            label: Text
+            name: '-478ac67c'
+            widget: string
+          - hint: 'Original text: research and FAQ sections., key: 376afd48'
+            label: Text
+            name: 376afd48
+            widget: string
       - label: Links
         name: links
         file: cms/_data/links.json
@@ -836,6 +986,14 @@ collections:
             label: Link
             name: 6e27794e
             widget: string
+          - hint: 'Original link: #contact, key: 6c80469d'
+            label: Link
+            name: 6c80469d
+            widget: string
+          - hint: 'Original link: #, key: 23'
+            label: Link
+            name: '23'
+            widget: string
           - hint: 'Original link: #research, key: 3070eebe'
             label: Link
             name: 3070eebe
@@ -844,19 +1002,9 @@ collections:
             label: Link
             name: 23a622ca
             widget: string
-          - hint: 'Original link: #, key: 23'
-            label: Link
-            name: '23'
-            widget: string
           - hint: 'Original link: #faq, key: 117413'
             label: Link
             name: '117413'
-            widget: string
-          - hint: >-
-              Original link: https://www.financialengineers.com/legal/imprint,
-              key: 49a5eb8
-            label: Link
-            name: 49a5eb8
             widget: string
       - label: Images
         name: images
@@ -932,7 +1080,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-580a5326'
+            name: '-4711c4c7'
             widget: object
             fields:
               - name: url
@@ -945,7 +1093,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-2a4bb768'
+            name: 18421c8b
             widget: object
             fields:
               - name: url
@@ -958,7 +1106,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-726e18ca'
+            name: 75781d96
             widget: object
             fields:
               - name: url
@@ -971,7 +1119,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: 12e37d9c
+            name: '-662aaee3'
             widget: object
             fields:
               - name: url
@@ -984,7 +1132,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-7c866cf7'
+            name: e51d1be
             widget: object
             fields:
               - name: url
@@ -997,7 +1145,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: c57d2cd
+            name: '-2b1beb3c'
             widget: object
             fields:
               - name: url
@@ -1088,7 +1236,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-4ee6c326'
+            name: '-580a5326'
             widget: object
             fields:
               - name: url
@@ -1101,7 +1249,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: e51d1be
+            name: '-2a4bb768'
             widget: object
             fields:
               - name: url
@@ -1114,7 +1262,46 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-2b1beb3c'
+            name: '-726e18ca'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 12e37d9c
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-7c866cf7'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: c57d2cd
             widget: object
             fields:
               - name: url

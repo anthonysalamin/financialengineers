@@ -10,7 +10,7 @@ f_pdf-file:
 updated-on: '2021-08-31T06:31:59.681Z'
 created-on: '2021-08-30T20:07:44.557Z'
 published-on: '2021-08-31T06:32:30.709Z'
-f_category: cms/pdfs-categories/cryptocurrency.md
+f_category: cms/pdf-categories/cryptocurrency.md
 layout: '[pdfs].html'
 tags: pdfs
 ---

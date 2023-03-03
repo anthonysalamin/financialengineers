@@ -7,7 +7,7 @@ f_pdf-file:
   url: >-
     https://uploads-ssl.webflow.com/60f68d3181d63469fa3ddb34/6130bac783f934636b7c18bb_Goldman%20-%20Cryptocurrency%20Valuation%20and%20Network%20Size%20(Pandl_Rosenberg).pdf
   alt: null
-f_category: cms/pdfs-categories/cryptocurrency.md
+f_category: cms/pdf-categories/cryptocurrency.md
 updated-on: '2021-09-02T11:51:56.324Z'
 created-on: '2021-09-02T11:51:56.324Z'
 published-on: '2021-09-02T13:43:13.188Z'

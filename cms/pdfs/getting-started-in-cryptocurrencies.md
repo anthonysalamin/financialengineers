@@ -7,7 +7,7 @@ f_pdf-file:
     https://uploads-ssl.webflow.com/60f68d3181d63469fa3ddb34/612d3836af80b1f93f86e236_WEF_Getting_Started_Cryptocurrency_2021.pdf
   alt: null
 slug: getting-started-in-cryptocurrencies
-f_category: cms/pdfs-categories/cryptocurrency.md
+f_category: cms/pdf-categories/cryptocurrency.md
 updated-on: '2021-08-30T19:59:16.400Z'
 created-on: '2021-08-30T19:58:04.708Z'
 published-on: '2021-08-30T19:59:21.304Z'

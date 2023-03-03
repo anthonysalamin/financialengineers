@@ -7,7 +7,7 @@ f_pdf-file:
   url: >-
     https://uploads-ssl.webflow.com/60f68d3181d63469fa3ddb34/612d3ad547844a26725c251b_Westpac%20G10%20FX.pdf
   alt: null
-f_category: cms/pdfs-categories/category-test-1.md
+f_category: cms/pdf-categories/category-test-1.md
 updated-on: '2021-08-30T20:09:06.155Z'
 created-on: '2021-08-30T20:09:06.155Z'
 published-on: '2021-08-30T20:09:57.253Z'

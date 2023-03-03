@@ -10,7 +10,7 @@ f_pdf-file:
   url: >-
     https://uploads-ssl.webflow.com/60f68d3181d63469fa3ddb34/6130de2cef358a0211d6f1fd_JPMorgan%20Crypto%20Weekly-%20Cryptocurrencies%20up%20as%20Market%20Takes%20Cues%20from%20Amazon%27s%20Job%20Ad.pdf
   alt: null
-f_category: cms/pdfs-categories/cryptocurrency.md
+f_category: cms/pdf-categories/cryptocurrency.md
 updated-on: '2021-09-02T14:23:05.284Z'
 created-on: '2021-09-02T14:23:05.284Z'
 published-on: '2021-09-02T14:27:51.646Z'

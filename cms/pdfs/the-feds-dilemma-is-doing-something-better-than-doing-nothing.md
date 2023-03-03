@@ -7,7 +7,7 @@ f_pdf-file:
   url: >-
     https://uploads-ssl.webflow.com/60f68d3181d63469fa3ddb34/6130dfe65736b4c886293470_TheFedsDilemma-IsDoingSomethingBetterThanDoingNothing20210621.pdf
   alt: null
-f_category: cms/pdfs-categories/category-test-2.md
+f_category: cms/pdf-categories/category-test-2.md
 updated-on: '2021-09-02T14:30:19.205Z'
 created-on: '2021-09-02T14:30:19.205Z'
 published-on: '2021-09-02T19:51:13.386Z'

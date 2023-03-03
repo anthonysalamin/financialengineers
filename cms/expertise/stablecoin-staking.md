@@ -1,13 +1,14 @@
 ---
 f_short-description: >-
-  Market neutral approach to DeFi enabling stablecoins to generate yield,
-  minimizing impermanent loss while outperforming certificates of deposit in
-  traditional markets.
-title: Stablecoin Staking
+  Seeking to bridge the requirements of regulated financial institutions with
+  investment opportunities created by cutting edge fin-tech projects, our
+  members receive competent roadmaps for evolving their business in the digital
+  economy.
+title: 'Regulatory Environments '
 slug: stablecoin-staking
-updated-on: '2021-08-31T07:23:35.675Z'
+updated-on: '2023-03-02T12:21:58.965Z'
 created-on: '2021-07-20T08:47:51.401Z'
-published-on: '2021-08-31T07:24:18.958Z'
+published-on: '2023-03-02T14:51:13.011Z'
 f_order: 2
 f_color: hsla(43, 100.00%, 51.56%, 1.00)
 layout: '[expertise].html'

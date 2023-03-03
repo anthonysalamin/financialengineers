@@ -1,0 +1,24 @@
+<div class="css w-embed">
+    <style>
+:root {
+  --glow-light: #ffffff;
+  --glow-color: #ffffff;
+}
+.punchline {
+  color: var(--glow-light);
+  text-shadow: 0 0 0px var(--glow-light), 0 0 8px var(--glow-light),
+    0 0 0px var(--glow-color), 0 0 0px var(--glow-color),
+    0 0 0px var(--glow-color), 0 0 60px var(--glow-color);
+  animation: blink 1.5s infinite alternate;
+}
+@keyframes blink {
+  0% {
+  }
+  100% {
+    text-shadow: 0 0 1px var(--glow-light), 0 0 10px var(--glow-light),
+      0 0 0px var(--glow-light), 0 0 0px var(--glow-color),
+      0 0 0px var(--glow-color), 0 0 40px var(--glow-color);
+  }
+}
+</style>
+  </div>

@@ -7,7 +7,7 @@ f_pdf-file:
   url: >-
     https://uploads-ssl.webflow.com/60f68d3181d63469fa3ddb34/6130df4632ae312a01a70c80_Goldman%20-%20Gold%20is%20a%20value%20buy.pdf
   alt: null
-f_category: cms/pdfs-categories/precious-metal.md
+f_category: cms/pdf-categories/precious-metal.md
 updated-on: '2021-09-02T20:17:12.314Z'
 created-on: '2021-09-02T20:17:12.314Z'
 published-on: '2021-09-02T20:19:56.780Z'

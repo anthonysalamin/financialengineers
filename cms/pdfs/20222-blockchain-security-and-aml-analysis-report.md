@@ -7,7 +7,7 @@ f_pdf-file:
   url: >-
     https://uploads-ssl.webflow.com/60f68d3181d63469fa3ddb34/63eb6f33a4665d9f19993d12_2022-Blockchain-Security-and-AML-Analysis-Annual-Report(EN).pdf
   alt: null
-f_category: cms/pdfs-categories/cryptocurrency.md
+f_category: cms/pdf-categories/cryptocurrency.md
 updated-on: '2023-02-14T14:30:02.189Z'
 created-on: '2023-02-14T11:24:29.310Z'
 published-on: '2023-02-14T14:30:06.801Z'

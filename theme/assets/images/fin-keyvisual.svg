@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="566" height="469" viewBox="0 0 566 469">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_2037" data-name="Rectangle 2037" width="566" height="469" fill="#fc0075"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_12" data-name="Mask Group 12" clip-path="url(#clip-path)">
+    <g id="Group_4310" data-name="Group 4310" transform="translate(13 107)">
+      <path id="Path_4709" data-name="Path 4709" d="M0,8.63V149.92H41.1V49.6H167.063V8.63H0Z" transform="translate(0 105.433)" fill="#f9fafc"/>
+      <rect id="Rectangle_2035" data-name="Rectangle 2035" width="41.105" height="248.083" transform="translate(255.881 7.137)" fill="#f9fafc"/>
+      <rect id="Rectangle_2036" data-name="Rectangle 2036" width="41.105" height="248.083" transform="translate(1574.277 7.137)" fill="#f9fafc"/>
+      <path id="Path_4710" data-name="Path 4710" d="M192.975,208.321V.55H151.87V249.162H318.933V208.321Z" transform="translate(1855.396 6.719)" fill="#f9fafc"/>
+      <path id="Path_4711" data-name="Path 4711" d="M154.95.55l61.988,147.5H92.962l-17.182,41.1L50.8,248.633H91.9l24.848-59.476H234.12l24.848,59.476h41.1L196.055.55Z" transform="translate(620.624 6.719)" fill="#f9fafc"/>
+      <path id="Path_4712" data-name="Path 4712" d="M231.89.55l61.856,147.5H169.9l-17.314,41.1L127.74,248.633h41.105l24.848-59.476H311.06l24.848,59.476h41.1L272.863.55Z" transform="translate(1560.599 6.719)" fill="#f9fafc"/>
+      <path id="Path_4713" data-name="Path 4713" d="M222.1.55l-13.878,9.781-13.878,9.913h7.137V174.221L70.5.682V.55H29.4V248.633H70.5V70.2l130.98,178.429h41.1V20.243h7.269l-13.878-9.913Z" transform="translate(359.18 6.719)" fill="#f9fafc"/>
+      <path id="Path_4714" data-name="Path 4714" d="M267.512.55l-13.878,9.781-13.878,9.913h7.269V174.221L115.913.682V.55H74.94V248.633h40.973V70.2L247.025,248.633H288V20.243h7.269l-13.878-9.913Z" transform="translate(915.542 6.719)" fill="#f9fafc"/>
+      <path id="Path_4715" data-name="Path 4715" d="M280.786,183.833a84.324,84.324,0,1,1-2.511-121.6l26.434-29.077a123.975,123.975,0,1,0,4.362,178.562Z" transform="translate(1184.451 6.888)" fill="#f9fafc"/>
+      <path id="Path_4716" data-name="Path 4716" d="M178.826,7.269H0V48.242H178.826v7.269l19.826-27.756L178.826,0Z" fill="#f9fafc"/>
+    </g>
+  </g>
+</svg>

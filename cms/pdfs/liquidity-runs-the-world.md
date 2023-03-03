@@ -7,7 +7,7 @@ f_pdf-file:
   url: >-
     https://uploads-ssl.webflow.com/60f68d3181d63469fa3ddb34/63eb8139cfb2a8f3905a919d_Liquidity%20Runs%20The%20World.pdf
   alt: null
-f_category: cms/pdfs-categories/cryptocurrency.md
+f_category: cms/pdf-categories/cryptocurrency.md
 updated-on: '2023-02-14T12:40:51.784Z'
 created-on: '2023-02-14T12:40:51.784Z'
 published-on: '2023-02-14T12:46:44.332Z'

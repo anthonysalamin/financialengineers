@@ -7,7 +7,7 @@ f_pdf-file:
   url: >-
     https://uploads-ssl.webflow.com/60f68d3181d63469fa3ddb34/612d3a3fbe2551735154f676_ING%20Rates%20Spark.pdf
   alt: null
-f_category: cms/pdfs-categories/category-test-2.md
+f_category: cms/pdf-categories/category-test-2.md
 updated-on: '2021-08-30T20:06:45.766Z'
 created-on: '2021-08-30T20:06:45.766Z'
 published-on: '2021-08-30T20:09:57.253Z'
