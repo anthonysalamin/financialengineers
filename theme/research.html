@@ -457,7 +457,7 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
           </div>
         </div><img src="{{ images.-662aaee3.url }}" loading="lazy" alt="{{ images.-662aaee3.alt | trim | escape }}" class="image">
       </div>
-      <div class="footer-wrap copyright"><img src="{{ images.53c5c69f.url }}" loading="eager" alt="{{ images.53c5c69f.alt | trim | escape }}" class="logo footer">
+      <div class="footer-wrap copyright"><img src="{{ images.-1fd5575.url }}" loading="eager" alt="{{ images.-1fd5575.alt | trim | escape }}" class="logo footer-vd">
         <div class="footer-wrap-links">
           <a href="{{ links.3070eebe }}" class="text-link footer right-margin">{{ texts.-110fda45 }}</a>
           <a href="{{ links.23 }}" target="_blank" class="text-link footer right-margin">{{ texts.-29f92c17 }}</a>
@@ -477,15 +477,28 @@ a:focus,button:focus,input:focus,textarea:focus{outline:0!important}a{-webkit-to
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
   <script>
 /*
- * FE | usebasin v.1
+ * FE | initUsebasin v.1
  * build 03.03.2023 @14:46
  */
 document.addEventListener("DOMContentLoaded", () => {
-  usebasin();
-}); // end DOM loaded
-function usebasin() {
+  disableDefaultFormSubmission();
+  initUsebasin();
+});
+function disableDefaultFormSubmission() {
+  Webflow.push(() => {
+    $("form").submit(() => {
+      console.log("default form submission canceled");
+      const formData = Object.fromEntries(new FormData(event.target).entries());
+      console.log(formData);
+      return false;
+    });
+  });
+}
+function initUsebasin() {
+  const production = true;
   const form = document.getElementById("form"),
-    endpoint = "https://usebasin.com/f/6a9c5e8fbcbe",
+    id = "6a9c5e8fbcbe",
+    url = `https://usebasin.com/f/${production ? id : "development"}`,
     emailField = document.querySelector("input[type=email]"),
     submitBtn = document.querySelector("input[type=submit]"),
     formSuccess = document.querySelector(".form-success-message"),
@@ -494,24 +507,27 @@ function usebasin() {
     textFail = document.getElementById("text-fail");
   // clause guard
   if (!form) return;
-  // show success message
+  // show error message
   function fail(response) {
+    console.log(`Oops, ${response.error}`);
+    console.log("usebasin submission failed");
     submitBtn.value = "Try again";
     formFail.style.display = "block";
-    textFail.textContent = `Oops, ${response.error}`;
+    textFail.textContent = `Oops, "error ${response.status}".`;
   }
-  // show error message
+  // show success message
   function success() {
+    console.log("usebasin submission send successfully");
     submitBtn.value = "Get in touch";
     form.style.display = "none";
     formSuccess.style.display = "block";
-    textSuccess.textContent = `Thank you, we will get back to you via ${emailField.value} as soon as possible.`;
+    textSuccess.textContent = `Thank you, we will get back to you via the provided email address "${emailField.value}" as soon as possible.`;
     formFail.style.display = "none";
   }
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
     const formData = new FormData(form);
-    fetch(endpoint, {
+    fetch(url, {
       method: "POST",
       headers: {
         Accept: "application/json"
@@ -519,13 +535,7 @@ function usebasin() {
       body: formData
     })
       .then((response) => {
-        if (response.status === 200) {
-          console.log("usebasin success");
-          success();
-        } else {
-          console.log("usebasin fail");
-          fail(response);
-        }
+        response.status === 200 ? success() : fail(response);
       })
       .catch((error) => console.log(error));
   });
